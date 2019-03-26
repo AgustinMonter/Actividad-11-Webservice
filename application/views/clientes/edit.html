@@ -1,0 +1,37 @@
+$def with(clientes, message)
+<h3>
+    <a href="/clientes">clientes</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+    <br>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" id="id" value="$clientes.id" />
+
+    <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input required id="nombre" type="text" class="form-control" name="nombre" size="30" value="$clientes.nombre"/>
+</div><div class="form-group">
+    <label for="ape_mat">Apellido materno</label>
+    <input required id="ape_mat" type="text" class="form-control" name="ape_mat" size="30" value="$clientes.ape_mat"/>
+</div><div class="form-group">
+    <label for="ape_pat">Apellido paterno</label>
+    <input required id="ape_pat" type="text" class="form-control" name="ape_pat" size="30" value="$clientes.ape_pat"/>
+</div><div class="form-group">
+    <label for="telefono">Telefono</label>
+    <input required id="telefono" type="text" class="form-control" name="telefono" size="30" value="$clientes.telefono"/>
+</div><div class="form-group">
+    <label for="correo">Correo</label>
+    <input required id="correo" type="text" class="form-control" name="correo" size="30" value="$clientes.correo"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span> Editar</button>
+    </div>
+</form>
+<br>
+<br>
+<br>
